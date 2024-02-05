@@ -521,6 +521,35 @@ When a user interacts with your application and sends a request to the server, t
 
 So, with each request, the server checks the session id in the cookie, retrieves the associated session data, and then can use that information to understand and manage the user's session, such as determining if the user is authenticated and accessing their stored data. It helps in maintaining the continuity of the user's experience across different interactions with the application.
 
+<details>
+<summary>
+Click me for a better explanation 
+</summary>
+<hr>
+
+### Express-Session Middleware and Cookie Creation
+
+1. **Client Request:**
+   - When a user interacts with the server (e.g., logging in), the server responds not only with data but also with instructions for the client's browser.
+
+2. **Set-Cookie Header:**
+   - The server, using express-session middleware, includes a "Set-Cookie" header in its response. This header contains session information, including the session id.
+
+3. **Browser Stores Cookie:**
+   - The client's browser receives this response, sees the "Set-Cookie" header, and stores the provided cookie (containing the session id) locally.
+
+4. **Subsequent Requests:**
+   - In future requests, the stored cookie is automatically included in the request headers. This allows the server to identify and associate the request with the correct user session.
+
+This process enables seamless session management and user recognition in subsequent interactions with the application.
+<hr>
+</details>
+
+<details>
+<summary>
+Click me for another way of explaining this concept. 
+</summary>
+<hr>
 ### Passport and Express-Session Simplified
 
 1. **User Authentication:**
@@ -539,7 +568,8 @@ So, with each request, the server checks the session id in the cookie, retrieves
    - Passport puts user info in `req`, making it easy to use in routes.
 
 Now, your app can remember who's logged in without asking for credentials each time!
-
+<hr>
+</details>
 **Congrats, the session middleware is now in place!**
 
 Time for a few questions...
