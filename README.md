@@ -63,7 +63,7 @@ For example, when we use online banking, or more importantly, save songs to our 
 
 Authentication is what enables an application to know the **identity** of the person using it.
 
-In SEI, we're going to learn 3 types of **authentication**:
+This can be achieved by: 
 
 - **Unit 2**: Logging in via a third-party provider (OAuth)
 - **Unit 3**: Token-based username/password login
