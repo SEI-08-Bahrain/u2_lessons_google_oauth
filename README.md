@@ -550,6 +550,7 @@ This process enables seamless session management and user recognition in subsequ
 Click me for another way of explaining this concept. 
 </summary>
 <hr>
+	
 ### Passport and Express-Session Simplified
 
 1. **User Authentication:**
@@ -570,6 +571,7 @@ Click me for another way of explaining this concept.
 Now, your app can remember who's logged in without asking for credentials each time!
 <hr>
 </details>
+
 **Congrats, the session middleware is now in place!**
 
 Time for a few questions...
