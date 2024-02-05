@@ -186,29 +186,27 @@ Yes, OAuth is complex. But not to worry, we don't have to know all of the nitty 
 
 ### A Playful Way to Understand how Oauth Works
 
-# OAuth Adventure with Nabeel and Salman
-
 Imagine Nabeel and Salman are students who want to access a super cool club (OAuth-protected resources), but they need special VIP passes (tokens) to get in. Here's how it goes:
 
-## Authentication Club
+#### Authentication Club
 Think of OAuth as the "Cool Club" where all the fun stuff (data) is happening.
 
-## VIP Pass (Token)
+#### VIP Pass (Token)
 The VIP pass is like a magical key that lets Nabeel and Salman into different parts of the club. Without it, they're stuck outside.
 
-## Permission Permission
+#### Permission Permission
 Before getting the VIP pass, Nabeel and Salman need permission from the "Club Owners" (you, the user) to enter. You, as the user, decide if they can come in.
 
-## VIP Pass Request
+#### VIP Pass Request
 After getting the permission nod, Nabeel and Salman ask the "Bouncer" (OAuth server) for their special VIP passes.
 
-## Special Access
+#### Special Access
 The VIP passes grant them access to specific zones of the club (data or services) - maybe the dance floor or the gaming area.
 
-## Party Rules (Scope)
+#### Party Rules (Scope)
 The VIP passes have party rules (scope) written on them. Nabeel's pass might let him dance, while Salman's pass allows him to play games. They can't do what the other's pass allows.
 
-## Party Time Limit
+#### Party Time Limit
 The VIP passes have an expiration time. After a certain period, they become invalid. So, Nabeel and Salman need to enjoy the party before their passes expire.
 
 In this way, Nabeel and Salman, our student adventurers, are navigating the OAuth club to access the fun zones, all while following the rules set by the "Club Owners" and the "Bouncer." It's a playful way to understand how OAuth works in granting access!
