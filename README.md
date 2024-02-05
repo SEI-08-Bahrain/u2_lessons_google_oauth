@@ -39,61 +39,17 @@
 
 This lesson will finalize mongoose-movies!
 
-The starter code for this lesson begins where the Mongoose Queries Lab left off (which also seeded the database with some Movies and performers).
+To start, clone down this repo and and move into mongoose-movies.
 
-You only have to sync if your code is incomplete or is not working.
+From there, `npm i`, `touch .env`, copy over your *DATABASE_URL* connection string and get readu tp rumble.
 
-1. Move into the `mongoose-movies` we've been working on. 
-
-2. Again, you only have to sync if your code is complete or is not working:
-    ```
-    git reset --hard origin/sync-15-finish-seeding-query-lab
-    ```
-3. Open the project's folder in VS Code:
-    ```
-    code .
-    ```
-4. Open an integrated terminal session:
-    ```
-    control + backtick
-    ```
-5. Start the Express server:
-    ```
-    nodemon
-    ```
-6. Browse to `localhost:3000`
+Also make sure to create a `.gitignore` file and add you `.env` and `node_modules`. 
 
 ### Remove Any Existing Reviews
 
-The upcoming user-centric change that's going to be made to the `reviewSchema` will prevent being able to add new reviews to any movie that currently has existing reviews (because they won't conform to the new schema).
+The upcoming user-centric change that's going to be made to the `reviewSchema` will prevent being able to add new reviews to any movie that currently has existing reviews (because they won't conform to the new schema).  
 
-Therefore, we need to clear out the `reviews` array exactly how/why we needed to clear out the `cast` array during the referencing lesson.
-
-1. Open a new Node REPL:
-
-```
-node
-```
-
-2. Load crud-helper.js:
-
-```
-.load crud-helper.js
-```
-
-3. Run the following command to clear out all reviews:
-
-```
-Movie.updateMany({},  { reviews: [] }).then(console.log)
-```
-
-4. Exit the REPL:
-
-```
-.exit
-```
-
-Now back to our regularly scheduled programming...
+Let's go ahead and clear out our database and add some new movies and performers before we begin. 
 
 ## 2. Intro to Authentication
 
