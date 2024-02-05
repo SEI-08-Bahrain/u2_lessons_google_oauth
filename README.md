@@ -456,15 +456,11 @@ You will then be able to access the `req.user` document in all of the controller
 
 Before we install Passport and a strategy, we need to install the [`express-session`](https://github.com/expressjs/session?_ga=1.40272994.1784656250.1446759094) middleware.
 
-Sessions, are a server-side way of remembering a user's browser session.
+This middleware helps the server remember a user's browser session by using a session id stored in a cookie. Passport uses this session to save important data for looking up users in the database. 
 
-Sessions remembers the browser session by setting a cookie that contains a _session id_. No other data is stored in the cookie, just the _id_ of the session.
+Think of the session middleware as the organizer at a party. When a guest (user) arrives, the organizer hands them a special wristband (cookie with a session id). This wristband is the express-session middleware at work. It helps the server (organizer) recognize the guest and remember details about them throughout the party (user's interactions with the website).
 
-On the server-side, your application can optionally store data pertaining to the user's session (`req.session`).
-
-Passport will use the session, which is an in-memory data-store by default, to store a nugget of information that will allow us to lookup the user in the database.
-
-FYI, since sessions are maintained in memory by default, if the server restarts, session data will be lost. You will see this happen when nodemon restarts the server and you are no longer logged in.
+So, when you install the express-session middleware, you essentially set up this wristband system. The middleware takes care of creating and managing these special wristbands (cookies with session ids) for each visitor. It enables your Express backend to handle and remember user sessions seamlessly.
 
 #### Step 4.1 - Installing Session Middleware
 
@@ -520,6 +516,25 @@ Open the _Application_ tab in _DevTools_, then expand _Cookies_ in the menu on t
 A cookie named `connect.sid` confirms that the session middleware is doing its job.
 
 The connect.sid cookie plays a crucial role in tracking user sessions within web applications. Typically associated with the express-session middleware in Express.js, it functions by generating a unique session ID for each user. This session ID is then stored in the connect.sid cookie, which is sent to the user's browser. In subsequent requests, the server utilizes this cookie to identify and retrieve the corresponding user session data, allowing for seamless session management.
+
+### Passport and Express-Session Simplified
+
+1. **User Authentication:**
+   - Passport checks if a user is valid during login.
+
+2. **Session Handling:**
+   - Express-session creates a special ID (cookie) for the user's browser.
+
+3. **User Info in Session:**
+   - Passport uses this ID to store a bit of user info on the server.
+
+4. **Subsequent Requests:**
+   - On future visits, the server uses the ID to recall user info.
+
+5. **Adding User to `req`:**
+   - Passport puts user info in `req`, making it easy to use in routes.
+
+Now, your app can remember who's logged in without asking for credentials each time!
 
 **Congrats, the session middleware is now in place!**
 
