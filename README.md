@@ -41,7 +41,7 @@ This lesson will finalize mongoose-movies!
 
 To start, clone down this repo and and move into mongoose-movies.
 
-From there, `npm i`, `touch .env`, copy over your *DATABASE_URL* connection string and get readu tp rumble.
+From there, `npm i`, `touch .env`, copy over your *DATABASE_URL* connection string and get ready to rumble.
 
 Also make sure to create a `.gitignore` file and add you `.env` and `node_modules`. 
 
