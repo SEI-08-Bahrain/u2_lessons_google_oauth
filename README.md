@@ -143,7 +143,7 @@ OAuth is hot, so let's use it!
 
 OAuth, short for Open Authorization, is an standard protocol that provides **client applications** access to **resources** of a service such as Google with the permission of the resources' **owner**.
 
-It's a standardized protocol that allows third-party applications to access a user's resources (like information or services) on a server without exposing the user's credentials, such as usernames and passwords. 
+Oauth allows third-party applications to access a user's resources (like information or services) on a server without exposing the user's credentials, such as usernames and passwords. 
 
 When you authenticate with Google using OAuth, the client application (the third-party app or service you're using) does not have direct access to your password. Instead, OAuth uses a token-based system to provide access.
 
